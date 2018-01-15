@@ -19,6 +19,21 @@ namespace RPSLS
             
         }
 
+        public void DisplayChoice()
+        {
+            Console.Clear();
+            Console.WriteLine(playerOne.playerName + " chose " + playerOne.playerChoice + "\r");
+            Console.WriteLine(playerTwo.playerName + " chose " + playerTwo.playerChoice + "\r");
+        }
+        public void DisplayRound()
+        {
+            Console.Clear();
+            Console.WriteLine("At the end of the round, the score is:");
+            Console.WriteLine(playerOne.playerName + " has " + playerOne.playerScore + " win(s)" + "\r");
+            Console.WriteLine(playerTwo.playerName + " has " + playerTwo.playerScore + " win(s)");
+            Console.ReadLine();
+        }
+
         public void DisplayInstruction()
         {
             string rpsls = "Rock Paper Scissors Lizard Spock";
@@ -55,7 +70,7 @@ namespace RPSLS
             {
                 Console.Clear();
                 Console.WriteLine("How would you like to set up this game?:" + "\n");
-                Console.WriteLine("(1) Human against Human" + "\n");
+                Console.WriteLine("(1) Human against Human" + "\r");
                 Console.WriteLine("(2) Human against Computer");
                 string playerSelection = Console.ReadLine();
                 switch (playerSelection)
@@ -64,43 +79,44 @@ namespace RPSLS
                         Console.Clear();
                         playerOne = new Human();
                         playerTwo = new Human();
-                    Console.WriteLine("Player one, what is your name?");
+                        Console.WriteLine("Player one, what is your name?");
                         playerOne.PlayerName();
-                    Console.Clear();
-                    Console.WriteLine("Player two, what is your name?");
+                        Console.Clear();
+                        Console.WriteLine("Player two, what is your name?");
                         playerTwo.PlayerName();
                         break;
                     case "2":
                         Console.Clear();
                         playerOne = new Human();
                         playerTwo = new Computer();
+                        Console.WriteLine("Player one, what is your name?");
                         playerOne.PlayerName();
+                        Console.Clear();
+                        Console.WriteLine("Player two, what is your name?");
                         playerTwo.PlayerName();
                         break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("Please select either 1 or 2");
-                    Console.ReadLine();
-                    ChoosePlayers();
-                    break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Please select either 1 or 2");
+                        Console.ReadLine();
+                        ChoosePlayers();
+                        break;
                 }
             }
-        
-            
-            
-            public void DeclareWinner()
-        {
-            if (playerOne.playerScore == 2)
+                 
+           public void DeclareWinner()
             {
-                Console.Clear();
-                Console.WriteLine(playerOne.playerName + " Wins the match!");
+                if (playerOne.playerScore == 2)
+                {
+                    Console.Clear();
+                    Console.WriteLine(playerOne.playerName + " wins the match!");
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine(playerTwo.playerName + " wins the match!");
+                }
             }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine(playerTwo.playerName + " Wins the match!");
-            }
-        }
 
             public void FindWinner()
             {
@@ -114,13 +130,13 @@ namespace RPSLS
                         }
                         else if (playerTwoChoice == "Scissors" | playerTwoChoice == "Lizard")
                         {
-                            Console.WriteLine(playerOne.playerName + " wins!");
+                            Console.WriteLine(playerOne.playerName + " wins the round!");
                             playerOne.playerScore += 1; 
                             Console.ReadLine();
                         }
                         else
                         {
-                            Console.WriteLine(playerTwo.playerName + " wins!");
+                            Console.WriteLine(playerTwo.playerName + " wins the round!");
                             playerTwo.playerScore += 1;
                             Console.ReadLine();
                         }
@@ -133,13 +149,13 @@ namespace RPSLS
                         }
                         else if (playerTwoChoice == "Paper" | playerTwoChoice == "Lizard")
                         {
-                        Console.WriteLine(playerOne.playerName + " wins!");
+                        Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
                         Console.ReadLine();
                         }
                         else
                         {
-                        Console.WriteLine(playerTwo.playerName + " wins!");
+                        Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
                         Console.ReadLine();
                         }
@@ -152,13 +168,13 @@ namespace RPSLS
                         }
                         else if (playerTwoChoice == "Rock" | playerTwoChoice == "Spock")
                         {
-                        Console.WriteLine(playerOne.playerName + " wins!");
+                        Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
                         Console.ReadLine();
                         }
                         else
                         {
-                        Console.WriteLine(playerTwo.playerName + " wins!");
+                        Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
                         Console.ReadLine();
                         }
@@ -171,13 +187,13 @@ namespace RPSLS
                         }
                         else if (playerTwoChoice == "Spock" | playerTwoChoice == "Paper")
                         {
-                        Console.WriteLine(playerOne.playerName + " wins!");
+                        Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
                         Console.ReadLine();
                         }
                         else
                         {
-                        Console.WriteLine(playerTwo.playerName + " wins!");
+                        Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
                         Console.ReadLine();
                         }
@@ -190,13 +206,13 @@ namespace RPSLS
                         }
                         else if (playerTwoChoice == "Scissors" | playerTwoChoice == "Rock")
                         {
-                        Console.WriteLine(playerOne.playerName + " wins!");
+                        Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
                         Console.ReadLine();
                         }
                         else
                         {
-                        Console.WriteLine(playerTwo.playerName + " wins!");
+                        Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
                         Console.ReadLine();
                         }

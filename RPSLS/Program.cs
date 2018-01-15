@@ -8,7 +8,6 @@ namespace RPSLS
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Game game = new Game();
@@ -17,10 +16,9 @@ namespace RPSLS
             while (game.playerOne.playerScore < 2 & game.playerTwo.playerScore < 2)
             {
                 game.Turn();
-                Console.Clear();
-                Console.WriteLine(game.playerOne.playerName + " chose " + game.playerOne.playerChoice + "\r");
-                Console.WriteLine(game.playerTwo.playerName + " chose " + game.playerTwo.playerChoice + "\r");
+                game.DisplayChoice();               
                 game.FindWinner();
+                game.DisplayRound();
             }
             game.DeclareWinner();
             Console.ReadLine();
