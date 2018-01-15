@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace RPSLS
 {
     class Program
@@ -21,9 +22,11 @@ namespace RPSLS
                 game.DisplayRound();
             }
             game.DeclareWinner();
+            Console.WriteLine("\n" + "\n" + "Press any key to continue");
             Console.ReadLine();
 
         }
+
     }
 }
 

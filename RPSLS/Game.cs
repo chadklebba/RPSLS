@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace RPSLS
 {
     class Game
@@ -31,6 +32,7 @@ namespace RPSLS
             Console.WriteLine("At the end of the round, the score is:");
             Console.WriteLine(playerOne.playerName + " has " + playerOne.playerScore + " win(s)" + "\r");
             Console.WriteLine(playerTwo.playerName + " has " + playerTwo.playerScore + " win(s)");
+            Console.WriteLine("\n"+"\n"+"Press any key to continue");
             Console.ReadLine();
         }
 
@@ -92,8 +94,8 @@ namespace RPSLS
                         Console.WriteLine("Player one, what is your name?");
                         playerOne.PlayerName();
                         Console.Clear();
-                        Console.WriteLine("Player two, what is your name?");
-                        playerTwo.PlayerName();
+                        Console.WriteLine("You will be playing against " + playerTwo.playerName);
+                        Console.ReadLine();
                         break;
                     default:
                         Console.Clear();
@@ -126,37 +128,43 @@ namespace RPSLS
                         if (playerTwoChoice == "Rock")
                         {
                             Console.WriteLine("Tie!");
-                            Console.ReadLine();
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
+                        Console.ReadLine();
                         }
                         else if (playerTwoChoice == "Scissors" | playerTwoChoice == "Lizard")
                         {
                             Console.WriteLine(playerOne.playerName + " wins the round!");
-                            playerOne.playerScore += 1; 
-                            Console.ReadLine();
+                            playerOne.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
+                        Console.ReadLine();
                         }
                         else
                         {
                             Console.WriteLine(playerTwo.playerName + " wins the round!");
                             playerTwo.playerScore += 1;
-                            Console.ReadLine();
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
+                        Console.ReadLine();
                         }
                         break;
                     case "Scissors":
                         if (playerTwoChoice == "Scissors")
                         {
                             Console.WriteLine("Tie!");
-                            Console.ReadLine();
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
+                        Console.ReadLine();
                         }
                         else if (playerTwoChoice == "Paper" | playerTwoChoice == "Lizard")
                         {
                         Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         else
                         {
                         Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         break;
@@ -164,18 +172,21 @@ namespace RPSLS
                         if (playerTwoChoice == "Paper")
                         {
                             Console.WriteLine("Tie!");
-                            Console.ReadLine();
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
+                        Console.ReadLine();
                         }
                         else if (playerTwoChoice == "Rock" | playerTwoChoice == "Spock")
                         {
                         Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         else
                         {
                         Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         break;
@@ -183,18 +194,21 @@ namespace RPSLS
                         if (playerTwoChoice == "Lizard")
                         {
                             Console.WriteLine("Tie!");
-                            Console.ReadLine();
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
+                        Console.ReadLine();
                         }
                         else if (playerTwoChoice == "Spock" | playerTwoChoice == "Paper")
                         {
                         Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         else
                         {
                         Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         break;
@@ -202,18 +216,21 @@ namespace RPSLS
                         if (playerTwoChoice == "Spock")
                         {
                             Console.WriteLine("Tie!");
-                            Console.ReadLine();
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
+                        Console.ReadLine();
                         }
                         else if (playerTwoChoice == "Scissors" | playerTwoChoice == "Rock")
                         {
                         Console.WriteLine(playerOne.playerName + " wins the round!");
                         playerOne.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         else
                         {
                         Console.WriteLine(playerTwo.playerName + " wins the round!");
                         playerTwo.playerScore += 1;
+                        Console.WriteLine("\n" + "\n" + "Press any key to continue");
                         Console.ReadLine();
                         }
                         break;
