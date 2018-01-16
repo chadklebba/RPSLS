@@ -22,9 +22,51 @@ namespace RPSLS
 
         public void DisplayChoice()
         {
+            string one = playerOne.playerChoice;
+            string two = playerTwo.playerChoice;
             Console.Clear();
             Console.WriteLine(playerOne.playerName + " chose " + playerOne.playerChoice + "\r");
             Console.WriteLine(playerTwo.playerName + " chose " + playerTwo.playerChoice + "\r");
+            if((one == "Scissors" | two == "Scissors") & (one == "Paper" | two == "Paper"))
+            {
+                Console.WriteLine("Scissors cuts Paper" + "\r");
+            }
+            if ((one == "Paper" | two == "Paper") & (one == "Rock" | two == "Rock"))
+            {
+                Console.WriteLine("Paper covers Rock" + "\r");
+            }
+            if ((one == "Rock" | two == "Rock") & (one == "Lizard" | two == "Lizard"))
+            {
+                Console.WriteLine("Rock crushes Lizard" + "\r");
+            }
+            if ((one == "Lizard" | two == "Lizard") & (one == "Spock" | two == "Spock"))
+            {
+                Console.WriteLine("Lizard poisons Spock" + "\r");
+            }
+            if ((one == "Spock" | two == "Spock") & (one == "Scissors" | two == "Scissors"))
+            {
+                Console.WriteLine("Spock smashes Scissors" + "\r");
+            }
+            if ((one == "Scissors" | two == "Scissors") & (one == "Lizard" | two == "Lizard"))
+            {
+                Console.WriteLine("Scissors decapitates Lizard" + "\r");
+            }
+            if ((one == "Lizard" | two == "Lizard") & (one == "Paper" | two == "Paper"))
+            {
+                Console.WriteLine("Lizard eats Paper" + "\r");
+            }
+            if ((one == "Paper" | two == "Paper") & (one == "Spock" | two == "Spock"))
+            {
+                Console.WriteLine("Paper disproves Spock" + "\r");
+            }
+            if ((one == "Spock" | two == "Spock") & (one == "Rock" | two == "Rock"))
+            {
+                Console.WriteLine("Spock vaporizes Rock" + "\r");
+            }
+            if ((one == "Rock" | two == "Rock") & (one == "Scissors" | two == "Scissors"))
+            {
+                Console.WriteLine("Rock crushes Scissors" + "\n");
+            }
         }
         public void DisplayRound()
         {
