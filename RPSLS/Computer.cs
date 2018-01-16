@@ -10,7 +10,7 @@ namespace RPSLS
     {
         public Computer()
         {
-            playerName = "Sheldon";
+            playerName = "Jarvis";
         }
 
         public override void PlayerChoose()

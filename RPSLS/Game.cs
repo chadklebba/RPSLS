@@ -81,7 +81,7 @@ namespace RPSLS
         public void DisplayInstruction()
         {
             string rpsls = "Rock Paper Scissors Lizard Spock";
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (rpsls.Length / 2)) + "}", rpsls) + "\n");
             Console.ResetColor();
             Console.WriteLine("The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found." + "\n");
@@ -96,8 +96,22 @@ namespace RPSLS
             Console.WriteLine("Spock vaporizes Rock" + "\r");
             Console.WriteLine("(and as it always has) Rock crushes Scissors"+"\n");
             Console.WriteLine("This match will be best 2 out of 3" + "\n");
-            Console.WriteLine("\n" + "Please press a key to start");
-            Console.ReadLine();
+            Console.WriteLine("For a video tutorial hit (v), otherwise hit any other key to continue");
+            ConsoleKeyInfo answer;
+            answer = Console.ReadKey();
+            switch (answer.Key)
+            {
+                case ConsoleKey.V:
+                    try
+                    {
+                        System.Diagnostics.Process.Start("https://youtu.be/cSLeBKT7-sM");
+                    }
+                    catch { }
+                    break;
+                default:
+                    break;
+            }
+                
         }
         public void Turn()
         {
@@ -113,7 +127,7 @@ namespace RPSLS
         public void ChoosePlayers()
             {
                 Console.Clear();
-                Console.WriteLine("How would you like to set up this game?:" + "\n");
+                Console.WriteLine("How would you like to set up this game?" + "\n");
                 Console.WriteLine("(1) Human against Human" + "\r");
                 Console.WriteLine("(2) Human against Computer");
                 string playerSelection = Console.ReadLine();
